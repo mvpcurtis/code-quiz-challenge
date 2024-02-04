@@ -11922,6 +11922,36 @@ section#highscores button#startGame {
   font-weight: bold;
 }
 
+section#finished {
+  min-height: calc(100vh - 60px);
+}
+section#finished span#score {
+  background-color: #ff8e3c;
+  padding: 0.5rem 1rem;
+}
+section#finished form {
+  background-color: #ff8e3c;
+  padding: 5rem;
+  border-radius: 0.25em;
+}
+section#finished form label {
+  font-weight: bold;
+}
+section#finished form input[type=text] {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.5rem;
+}
+section#finished form button {
+  width: 100%;
+}
+section#finished form p {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
 section#questions {
   min-height: calc(100vh - 60px);
   border-radius: 0.25em;

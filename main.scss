@@ -73,6 +73,36 @@ section#highscores {
   }
 }
 
+section#finished {
+  min-height: calc(100vh - 60px);
+  span#score {
+    background-color: $orange-color;
+    padding: 0.5rem 1rem;
+  }
+  form {
+    background-color: $orange-color;
+    padding: 5rem;
+    border-radius: 0.25em;
+    label {
+      font-weight: bold;
+    }
+    input[type='text'] {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-radius: 0.25em;
+      padding: 0.5rem;
+    }
+    button {
+      width: 100%;
+    }
+    p {
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  }
+}
+
 section#questions {
   min-height: calc(100vh - 60px);
   border-radius: 0.25em;

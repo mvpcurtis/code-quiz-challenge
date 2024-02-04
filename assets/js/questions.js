@@ -2,7 +2,10 @@ const linkedFile = 'JS file linked!';
 const startGame = document.getElementById('startGame');
 const welcomeScreen = document.getElementById('welcome');
 const questionScreen = document.getElementById('questions');
+const finishedScreen = document.getElementById('finished');
 const timeCount = document.getElementById('timeCount');
+const answerBoxes = document.getElementById('answers');
+const feedbackEL = document.getElementById('feedback');
 
 // question and answer blocks
 const question = document.getElementById('question');
@@ -12,6 +15,8 @@ const answerC = document.getElementById('C');
 const answerD = document.getElementById('D');
 
 let ansIndex = 0;
+let queAns = null;
+let score = 0;
 
 // lets dev know that js file is linked to index
 console.log(linkedFile);
@@ -90,14 +95,27 @@ function questions() {
   answerB.textContent = 'B) ' + allQuestions[ansIndex].ans[1];
   answerC.textContent = 'C) ' + allQuestions[ansIndex].ans[2];
   answerD.textContent = 'D) ' + allQuestions[ansIndex].ans[3];
+  queAns = allQuestions[ansIndex].correctAns;
+  console.log(queAns);
   randomQuestion();
 }
 
 function endQuiz() {
   console.log('Quiz has ended!');
-  return;
+  questionScreen.setAttribute('class', 'hide');
+  finishedScreen.classList.remove('hide');
 }
 
-function isCorrect() {}
+answerBoxes.addEventListener('click', function (e) {
+  if (e.target.tagName.toLowerCase() === 'span') {
+    if (e.target.dataset.index === 'queAns') {
+      score++;
+      feedbackEL.textContent = 'Correct!';
+    } else {
+      score--;
+      feedbackEL.textContent = 'Wrong, try again.';
+    }
+  }
+});
 
 startGame.addEventListener('click', start);
