@@ -61,7 +61,8 @@ a.button:focus {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-section#welcome {
+section#welcome,
+section#highscores {
   min-height: calc(100vh - 60px);
   p {
     width: 60%;
@@ -80,7 +81,6 @@ section#questions {
     padding: 1rem 0;
   }
   span.answer {
-    // background-color: steelblue;
     border: 2px solid $black-colour;
     border-radius: 0.25em;
     padding: 1rem;
@@ -93,6 +93,10 @@ section#questions {
     cursor: pointer;
     background-color: $orange-color;
   }
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem 1rem;
 }
 
 @media screen and (max-width: 992px) {

@@ -11908,13 +11908,16 @@ a.button:focus {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-section#welcome {
+section#welcome,
+section#highscores {
   min-height: calc(100vh - 60px);
 }
-section#welcome p {
+section#welcome p,
+section#highscores p {
   width: 60%;
 }
-section#welcome button#startGame {
+section#welcome button#startGame,
+section#highscores button#startGame {
   background-color: #ff8e3c;
   font-weight: bold;
 }
@@ -11938,6 +11941,10 @@ section#questions span.answer:hover,
 section#questions span.answer:focus {
   cursor: pointer;
   background-color: #ff8e3c;
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem 1rem;
 }
 
 @media screen and (max-width: 992px) {
