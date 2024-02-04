@@ -1,0 +1,115 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// colour variables
+$white-colour: #fffffe;
+$black-colour: #0d0d0d;
+$blue-colour: rgb(29, 127, 255);
+$orange-color: #ff8e3c;
+// font size variabls
+$font-size: 1.25rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $font-size;
+  background-color: $white-colour;
+  color: $black-colour;
+  line-height: 1;
+}
+
+nav {
+  min-height: 60px;
+  padding: 0 3rem;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+a:link,
+a:visited {
+  color: $blue-colour;
+}
+
+button,
+a.button,
+button:active,
+a.button:active {
+  background-color: $black-colour;
+  color: $white-colour;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 0.25em;
+  padding: 1rem 2rem;
+  transition: all 0.1 ease-in-out;
+}
+
+button:hover,
+a.button:hover,
+button:focus,
+a.button:focus {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section#welcome {
+  min-height: calc(100vh - 60px);
+  p {
+    width: 60%;
+  }
+  button#startGame {
+    background-color: $orange-color;
+    font-weight: bold;
+  }
+}
+
+section#questions {
+  min-height: calc(100vh - 60px);
+  border-radius: 0.25em;
+  padding: 3rem;
+  h2#question {
+    padding: 1rem 0;
+  }
+  span.answer {
+    // background-color: steelblue;
+    border: 2px solid $black-colour;
+    border-radius: 0.25em;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.1s ease-in-out;
+  }
+
+  span.answer:hover,
+  span.answer:focus {
+    cursor: pointer;
+    background-color: $orange-color;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section#welcome {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.active {
+  display: block !important;
+}

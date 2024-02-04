@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <!-- title -->
+    <title>Coding Test Quiz | Curtis</title>
+    <!-- external styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <!-- body -->
+  <body>
+    <!-- section: navbar -->
+    <nav class="d-flex flex-row justify-content-between align-items-center">
+      <span id="scores"><a href="scores.html">View Highscores</a></span>
+      <span id="time">Time Left: <span id="timeCount">--</span></span>
+    </nav>
+    <!-- container -->
+    <div class="container">
+      <!-- section: welcome screen -->
+      <section id="welcome" class="d-flex flex-column justify-content-center">
+        <h1>Code Quiz Challenge</h1>
+        <p>This is a timed quiz so no pressure. I will mention that any answer that are incorrect with take 10 seconds from the timer as a penalty! Good luck.</p>
+        <div class="d-flex flex-row mt-3">
+          <!-- start game button -->
+          <button id="startGame" class="me-2">Start Game</button>
+          <!-- portfolio button -->
+          <a class="button" href="https://mvpcurtis.xyz/">My Portfolio</a>
+        </div>
+      </section>
+      <!-- section: questions -->
+      <section id="questions" class="hide d-flex flex-column justify-content-center align-items-center">
+        <h2 id="question">question</h2>
+        <section id="answers" class="d-flex flex-column w-100">
+          <span id="A" class="answer">A</span>
+          <span id="B" class="answer">B</span>
+          <span id="C" class="answer">C</span>
+          <span id="D" class="answer">D</span>
+        </section>
+      </section>
+    </div>
+    <!-- external js -->
+    <script src="assets/js/questions.js"></script>
+  </body>
+</html>
